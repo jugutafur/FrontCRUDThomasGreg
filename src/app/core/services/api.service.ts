@@ -14,23 +14,33 @@ export class ApiService {
   ) { }
 
   getAllArchives (){
-    return this.http.get<any>(environment.Url_apiBD);
+    return this.http.get<any>(environment.Url_apiBD+ "todos");
   }
 
-  getXUser(id: string){
-    return this.http.get<archivo[]>(environment.Url_apiBD+ "/" + id);
+  createArchive(archive: archivo){
+    return this.http.post(environment.Url_apiBD+ "save", archive);
   }
 
+  updateArchive(id: String){
+    return this.http.get<archivo>(environment.Url_apiBD + id);
+  }
+
+  DeleteArchive(id: String){
+    console.log("ver id a Eliminar desde service");
+    console.log(id);
+    return this.http.delete<boolean>(environment.Url_apiBD+ "delete/" + id);
+  }
+/*
   createUser(Archivo: archivo){
     return this.http.post(environment.Url_apiBD+ "save", Archivo);
   }
 
-  updateUser(id: string, changes: Partial<archivo>){
+    updateArchive(id: string, changes: Partial<archivo>){
     return this.http.put<archivo[]>(environment.Url_apiBD + id, changes);
   }
 
   loginAcount(){
     return this.http.get<archivo[]>(environment.Url_apiBD+ "/todos");
   }
-
+*/
 }
