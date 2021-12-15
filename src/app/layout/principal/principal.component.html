@@ -1,0 +1,55 @@
+<app-banner></app-banner>
+<p>
+  Bienvenido, <br><br>
+  Esta solución le brindara información detallada sobre la creacion, modificación y eliminación de documentos <br><br>
+
+  <button>Ver</button>
+</p>
+
+  <table #table class="table table-bordered table-responsive-md text-center table-sticky mb-5">
+    <thead>
+      <tr>
+        <th class="text-center align-middle"><strong>Empresa</strong></th>
+        <th class="text-center align-middle"><strong>Caja</strong></th>
+        <th class="text-center align-middle"><strong>Bolsa</strong></th>
+        <th class="text-center align-middle"><strong>Documento</strong></th>  <!--Ciclo | Modulo-->
+    </thead>
+<!--
+    <tbody>
+      <tr *ngIf="academicoCargados.length == 0">
+        <td colspan="15">No hay registros cargados</td>
+      </tr>
+      <tr *ngFor="let r of academicoCargados; let k = index;">
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle">{{k+1}}</td>
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle">{{r.llave_MinTIC}}</td>
+        <td style="font-size: 18px!important; width: 10%"class="text-center align-middle">{{r.n_Documento}}</td>
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle">{{r.ciclo}}</td>
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle">{{r.reto_Actividad}}</td>
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle">{{r.descripcion}}</td>
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle">{{r.calificacion}}</td>
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle">{{r.desc_Calificacion}}</td>
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle">{{r.pond_Calificacion}}</td>
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle">{{r.fecha_Calificacion | date: 'dd/MM/yyyy'}}</td>
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle">{{r.documento_tutor}}</td>
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle">{{r.fecha_Actualizacion | date: 'dd/MM/yyyy'}}</td>
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle">{{r.fecha_Cargue | date: 'dd/MM/yyyy'}}</td>
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle" *ngIf="this.esHabilitado">
+          <a id="btnModificarAcademico" class="fas fa-pencil-alt text-warning" title="Modificar académico"
+          (click)="openModalActualizarAcademico(r, k)"></a>
+        </td>
+        <td style="font-size: 18px!important; width: 5%" class="text-center align-middle" *ngIf="this.esHabilitado">
+          <a id="btnEliminarAcademico" class="fas fa-trash-alt text-danger" title="Eliminar académico"
+          (click)="openModalEliminarAcademico(r, k)"></a>
+        </td>
+      </tr>
+    </tbody>
+-->
+  </table>
+
+  <button>Crear</button>
+  <button>Actualizar</button>
+  <button>Modificar</button>
+  <button>Eliminar</button>
+
+
+<app-footer></app-footer>
